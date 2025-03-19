@@ -1,0 +1,90 @@
+/* Estilos para el fondo */
+.background {
+    position: fixed; /* Fija la imagen al fondo de la página */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    height: 100vh; /* Ocupa todo el alto de la pantalla */
+    background-image: url('../../../assets/background.jpg'); /* Imagen de fondo */
+    background-size: cover; /* La imagen cubre todo el fondo */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No repetir la imagen */
+    display: flex; /* Activa flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+}
+
+/* Contenedor del texto y la rueda */
+.content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Texto */
+h1 {
+    color: white;
+    font-size: 3em;
+    opacity: 0; /* Inicialmente oculto */
+    animation: aparecer 1s ease-in-out forwards;
+}
+
+/* Animación */
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Rueda1 animada */
+.rueda1 {
+    width: 10px; /* Tamaño de la rueda */
+    animation: girarYSaltar 1s ease-in-out infinite;
+    margin-left: 10px;
+    margin-bottom: -20px;
+}
+/* Rueda2 animada */
+.rueda2 {
+    width: 10px; /* Tamaño de la rueda */
+    
+    animation: girarYSaltar 1s ease-in-out infinite;
+    animation-delay: 0.2s;
+    margin-left: 10px;
+    margin-bottom: -20px;
+}
+
+/* Rueda3 animada */
+.rueda3 {
+    width: 10px; /* Tamaño de la rueda */
+    
+    animation: girarYSaltar 1s ease-in-out infinite;
+    animation-delay: 0.4s;
+    margin-left: 10px;
+    margin-bottom: -20px;
+}
+
+/* Animación de la rueda */
+@keyframes girarYSaltar {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    20% {
+        transform: rotate(90deg) translateY(0px); 
+    }
+    40% {
+        transform: rotate(180deg) translateY(10px); /* Salto hacia arriba */
+    }
+    60% {
+        transform: rotate(240deg) translateY(0px); 
+    }
+    100% {
+        transform: rotate(360deg) translateY(0); 
+    }
+}
